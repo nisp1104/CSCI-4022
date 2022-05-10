@@ -1,10 +1,6 @@
+# Applying Data Science to CU's Course Schedule
 
-
-Nick Spooner
-
-CSCI 4022
-
-Applying Data Science to CU's Course Schedule
+This repository holds the Jupyter notebook I wrote as the submission for my Advanced Data Science class's final project. The overall purpose of the code is to provide CU Boulder class recommendations based on a class input. The data comes from Faculty Course Questionnaires that students fill out for their enrolled classes every semester. The text below is the write-up that I created to describe my project in full detail.
 
 **Introduction**
 
