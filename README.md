@@ -31,13 +31,19 @@ This model would achieve many results that the project is looking to answer. It 
 
 After removing the identifying columns, converting the rest of the data to a numeric matrix, and normalizing the data, I passed it through a PCA algorithm to determine the principal columns using the resultant eigenvectors. These columns were the college, the number of students enrolled, and the response percentage. Those were the most crucial to the dataset, so I passed them through the k-means clustering algorithm to group them by similarity. Once I did, I had a figure to show where each data point belonged to each cluster. I ran the k-means clustering algorithm on the data from values of k ranging from 1 to 5 and plotted the result of the mean error. From the below figure, it seems that an equal-sized elbow occurs at values of k equalling 2, 3, and 4, so I picked 4 because it looked the best visually on the graph.
 
-![Elbow plot of different k-means values](kmeans_elbow.png)
+<p align="center">
+  <img src="kmeans_elbow.png" alt="Elbow plot of different k-means values" width="400"/>
+</p>
+<p align="center">
+  Figure 1: Elbow plot of different k-means values
+</p>
 
-Figure 1: Elbow plot of different k-means values
-
-![k-means on College, Response %, and # Enrolled](kmeans.png)
-
-Figure 2: k-means on College, Response %, and # Enrolled
+<p align="center">
+  <img src="kmeans.png" alt="k-means on College, Response %, and # Enrolled" width="400"/>
+</p>
+<p align="center">
+  Figure 2: k-means on College, Response %, and # Enrolled
+</p>
 
 After the clusters had been formed, I computed which cluster my chosen class was in, found its location based on the principal dimensions, and computed the location of each neighbor in the same cluster. Then I computed which three neighbors were the smallest distance away from my chosen class, meaning that they were the most similar in terms of the college, the number of students enrolled, and the percentage of students out of the class that responded to the FCQs. I found that for an input of Advanced Data Science with Zach Mullen, the three most similar classes were Thermodynamics 2, Hydraulic Engineering, and Component Design respectively. A student taking computer science courses would probably not be able to take Thermodynamics 2 without some prerequisites first, so the advanced recommendation system implementation would have to consider which classes a student has taken previously before outputting a certain class. If the class was a top recommendation, like Thermodynamics 2 was in this case, then the system could calculate how similar the prerequisite courses were and choose to recommend them as well.
 
